@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的个人工作台</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- 侧边栏导航 -->
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <span class="logo">⚡</span>
+        <span class="title">个人工作台</span>
+      </div>
+      <ul class="nav-list">
+        <li class="nav-item active" data-page="dashboard">
+          <span class="icon">📊</span><span>总仪表盘</span>
+        </li>
+        <li class="nav-item" data-page="tasks">
+          <span class="icon">✅</span><span>任务管理</span>
+        </li>
+        <li class="nav-item" data-page="habits">
+          <span class="icon">🎯</span><span>习惯打卡</span>
+        </li>
+        <li class="nav-item" data-page="finance">
+          <span class="icon">💰</span><span>记账管理</span>
+        </li>
+        <li class="nav-item" data-page="journal">
+          <span class="icon">📝</span><span>日志复盘</span>
+        </li>
+      </ul>
+      <div class="sidebar-footer">
+        <div class="streak-info">
+          <span class="streak-icon">🔥</span>
+          <span>连续 <strong id="streak-days">0</strong> 天</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <main class="main-content">
+      <!-- 顶部栏 -->
+      <header class="topbar">
+        <h1 id="page-title">总仪表盘</h1>
+        <div class="date-display" id="current-date"></div>
+      </header>
+
+      <!-- 页面容器 -->
+      <div id="page-container"></div>
+    </main>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
